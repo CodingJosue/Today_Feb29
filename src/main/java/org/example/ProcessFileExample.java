@@ -17,15 +17,18 @@ public class ProcessFileExample {
         }
 
     }
-    private static void processFile(String fileName) throws FileNotFoundException, IOException{
+    // we use this catch for the custom
+    private static void processFile(String fileName) throws IOException,FileNotFoundException, IllegalArgumentException{
         if(fileName == null|| fileName.isEmpty() ){
-            throw new IOException("IOException occured during processing the file ");
+            throw new FileNotFoundException("IOException occured during processing the file ");
 
-        }
+        } // This is a particular piece of logic  which is an exception for me like its not an actual exception
+
         if(fileName.length() > 20){
             throw new IllegalArgumentException("File name is too long ");
         }
 
+        // whereas the others are checked exception that java force you to deal wih illegal argument our
         if(fileName.equals("example.txt")){
             throw  new IOException("IOException occured while processing the file ");
         }
