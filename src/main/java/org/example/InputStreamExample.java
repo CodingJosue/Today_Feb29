@@ -11,7 +11,7 @@ public class InputStreamExample {
     try {
 
 
-        FileInputStream input1 = new FileInputStream("C:\\Users\\6257586\\Desktop\\try.tx");
+        FileInputStream input1 = new FileInputStream("C:\\Users\\6257586\\Desktop\\try.txt");
         FileInputStream input2 = new FileInputStream("C:\\Users\\6257586\\Desktop\\sample.tx");
 
         FileOutputStream output1 = new FileOutputStream("C:\\Users\\6257586\\Desktop\\kly.txt");
