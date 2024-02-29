@@ -8,13 +8,13 @@ public class FileOutputStreamExample {
     public static void main(String[] args) {
         // must have a catch close to be able for exceptions
         try{
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Enter a number");
 
-            FileOutputStream fout = new FileOutputStream("C:\\Users\\6257586\\Desktop\\try.txt"); // creates the file for you
-            fout.write(65);
+            FileOutputStream fout = new FileOutputStream("C:\\Users\\6257586\\Desktop\\try.txt");
+            String s = "Welcome to java advance string byte array";
+            byte[] b = s.getBytes();
+            fout.write(b);
             fout.close();
-            sc.close();
+
         }catch (IOException ex){
             System.out.println(ex.getMessage());
         }
