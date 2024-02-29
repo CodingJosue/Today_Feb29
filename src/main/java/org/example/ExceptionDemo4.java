@@ -7,6 +7,7 @@ public class ExceptionDemo4 {
 
         Scanner sc = new Scanner(System.in);
 
+        System.out.println("Enter amount: ");
         double initialBalance = sc.nextDouble();
         try {
             // nested try and catch
@@ -17,6 +18,7 @@ public class ExceptionDemo4 {
                 validateWithDrawalAmount(withDrawAmount);
 
                 double remainingBalance = updateBalance(initialBalance,withDrawAmount);
+                System.out.println(remainingBalance);
 
             }catch (InvalidWithDrawalException e){
                 System.out.println(e.getMessage());
